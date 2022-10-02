@@ -3,12 +3,16 @@ import { Routes, RouterModule } from '@angular/router';
 import {CartComponent} from './cart/cart.component';
 import {HomeComponent} from './home/home.component';
 import {DetailComponent} from './detail/detail.component';
+import {LoginComponent} from './login/login.component';
+import {BookListComponent} from './book-list/book-list.component';
 
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
-  {path: 'home/cart', component: CartComponent},
-  {path: 'hoke/detail', component: DetailComponent},
+  {path: 'cart', component: CartComponent},
+  {path: 'detail', component: DetailComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'list', component: BookListComponent}
 ];
 
 @NgModule({
