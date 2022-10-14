@@ -8,7 +8,8 @@ import {DetailComponent} from './detail/detail.component';
 import {HomeComponent} from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { BookListComponent } from './book-list/book-list.component';
-
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {ToastrModule} from 'ngx-toastr';
 
 @NgModule({
   declarations: [CartComponent, DetailComponent, HomeComponent, LoginComponent, BookListComponent],
@@ -20,7 +21,13 @@ import { BookListComponent } from './book-list/book-list.component';
     CommonModule,
     BookRoutingModule,
     ReactiveFormsModule,
-
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      positionClass : 'toast-top-right',
+      timeOut: 1000,
+      progressBar: true,
+      progressAnimation: 'increasing',
+      preventDuplicates: true}),
   ]
 })
 export class BookModule { }

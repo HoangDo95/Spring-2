@@ -8,6 +8,7 @@ import {BookListComponent} from './book-list/book-list.component';
 
 
 const routes: Routes = [
+  {path: '', pathMatch: 'full', redirectTo: 'list'},
   {path: 'home', component: HomeComponent},
   {path: 'cart', component: CartComponent},
   {path: 'detail', component: DetailComponent},
@@ -17,6 +18,8 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [
+    RouterModule
+  ]
 })
 export class BookRoutingModule { }
